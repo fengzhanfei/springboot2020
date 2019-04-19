@@ -1,0 +1,13 @@
+spring:
+  jpa:
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+
+#同时存在 application.yml 和 application.properties，并且里面配置相同，application.properties 的配置会覆盖 application.yml。
+neo:
+ title: 纯洁的微笑
+ description: 分享技术，品味生活
