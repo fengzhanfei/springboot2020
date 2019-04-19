@@ -1,4 +1,12 @@
+
 spring:
+  mvc:
+    view:
+      #指明 jsp 文件在 webapp 下的哪个目录
+      prefix: /WEB-INF/page/
+      #指明 jsp 以什么样的后缀结尾
+      suffix: .jsp
+
   jpa:
     show-sql: true
   datasource:
@@ -6,6 +14,7 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.jdbc.Driver
+
 
 #同时存在 application.yml 和 application.properties，并且里面配置相同，application.properties 的配置会覆盖 application.yml。
 neo:

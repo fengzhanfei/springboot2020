@@ -11,12 +11,14 @@ package com.fei.controller;/**
  * @update @date 2019/4/19 15:04
  */
 
+import com.fei.config.NeoProperties;
 import com.fei.entity.User;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -32,7 +34,8 @@ public class WebController {
 
     @RequestMapping("/saveUser")
     public void saveUser(@Valid User user, BindingResult result) {
-        System.out.println("user:"+user);
+        NeoProperties properties = new NeoProperties();
+        System.out.println("properties.getDescription:"+properties.getDescription());
         if(result.hasErrors()) {
             List<ObjectError> list = result.getAllErrors();
             for (ObjectError error : list) {
