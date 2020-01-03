@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: fengzf
+
+  profiles:
+    # 设置激活的环境
+    active: dev
